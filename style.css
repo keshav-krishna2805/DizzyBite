@@ -20,3 +20,97 @@ body{
     font-weight: 600;
     color: white;
 }
+
+#header2 {
+    width:100%;
+    height: 88vh;
+    background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url("https://thumbs.dreamstime.com/b/red-lentil-soup-cooking-ingredients-dark-rustic-kitchen-table-background-top-view-healthy-vegan-food-concept-vegetarian-135984439.jpg?w=1400");
+    background-size: cover;
+    background-position: center;
+    margin: 2px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+    padding: 5.5vh 5% 0;
+    box-sizing: border-box;
+}
+#header2 h1{
+    font-size: 8.1rem;
+    font-family: serif, "Segoe UI", "Open Sans", "Helvetica Neue", sans-serif;
+    font-weight: bold;
+    margin: 0 0 5px 0 ;
+    color: white;
+    text-shadow: 4px 4px 15px black;
+}
+#header2 p{
+    font-size: 2rem;
+    margin: 0 auto;
+    font-weight: bold;
+    color: white;
+    text-shadow: 4px 4px 15px black;
+    font-family: "Segoe UI", "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.align {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 6vh;
+}
+
+.location-container,.search-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.location-input,.search-input {
+    height: 7vh;
+    font-size: 1rem;
+    width: 100%;
+    padding: 0 10px;
+    border: 2px solid #ccc;
+    box-sizing: border-box;
+}
+
+.location-input {
+    border-radius: 10px;
+    width: 35vh;
+}
+
+.search-input {
+    border-right: none;
+    border-radius: 10px 0 0 10px;
+    width: 40vh;
+}
+
+.search-button {
+    height: 7vh;
+    min-width: 50px;
+    max-width: 50px;
+    border: 2px solid #ccc;
+    border-left: none;
+    border-radius: 0 10px 10px 0;
+    background-color: #fdfeff;
+    color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    padding: 0;
+    flex-shrink: 0;
+}
+
+.search-button:hover {
+    background-color: #da6e4a;
+    color: white;
+}
+
+.search-button i {
+    font-size: 1rem;
+}
