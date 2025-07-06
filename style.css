@@ -1,6 +1,43 @@
-body{
-    margin: 5px;
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
 }
+html{
+    font-size: 62.5%;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    color: #222222;
+    line-height: 1.6;
+    font-family: 'Poppins', sans-serif;
+}
+/* ###################### utility classes ######################################  */
+.text-green{
+    color: #1abc9c;
+}
+.upper{
+    text-transform: uppercase;
+}
+.btn{
+    display: inline-block;
+    padding: 1em 2.5em;
+    text-decoration: none;
+    border-radius: 50px;
+    cursor: pointer;
+    outline: none;
+    margin-top: 1em;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+.btn-primary{
+    color: #fff;
+    background: #16a085;
+}
+
+/* --------------------------------------------- */
 .box{
     display: flex;
     position: sticky;
@@ -10,7 +47,7 @@ body{
     background: linear-gradient(to right, #f53b02, #b44316);
     justify-content: right;
     align-items: center;
-    border-radius: 20px;
+    border-radius: 10px;
 }
 .text{
     margin: 10px;
@@ -27,15 +64,17 @@ body{
     background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url("https://thumbs.dreamstime.com/b/red-lentil-soup-cooking-ingredients-dark-rustic-kitchen-table-background-top-view-healthy-vegan-food-concept-vegetarian-135984439.jpg?w=1400");
     background-size: cover;
     background-position: center;
-    margin: 2px;
+    margin-top: 0.5px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
     text-align: center;
-    padding: 5.5vh 5% 0;
+    padding: 10.5vh 5% 0;
     box-sizing: border-box;
+    border-radius: 10px;
 }
+
 #header2 h1{
     font-size: 8.1rem;
     font-family: serif, "Segoe UI", "Open Sans", "Helvetica Neue", sans-serif;
@@ -113,4 +152,233 @@ body{
 
 .search-button i {
     font-size: 1rem;
+}
+
+
+/* ################## food category styling #####################  */
+.container{
+    max-width: 1200px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+#food{
+    padding: 5rem 0 10rem 0;
+}
+#food h2{
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 400;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    color: #555;
+
+}
+.food-container{
+    display: flex;
+    justify-content: space-between;
+}
+.food-container img{
+    display: block;
+    width: 100%;
+    max-width: 370px;
+    margin: auto;
+    max-height: 300px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.img-container{
+    position: relative;
+    margin: 0 1rem;
+}
+.img-content{
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+    opacity: 0;
+    z-index: 2;
+    transition: all 0.3s ease-in-out 0.1s;
+    text-align: center;
+}
+.img-content h3{
+    color: #fff;
+    font-size: 3rem;
+
+}
+.img-content a{
+    font-weight: 500;
+    font-size: 1.2rem;
+    
+}
+.img-container::after{
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.871);
+    opacity: 0;
+    z-index: 1;
+    transform: scaleY(0);
+    transform-origin: 100% 100%;
+    transition: all 0.3s ease-in-out;  
+}
+
+.img-container:hover::after{
+    opacity: 1;
+    transform:  scaleY(1);
+}
+.img-container:hover .img-content{
+    opacity: 1;
+    top: 50%;
+}
+/* ####################################### TESTIMONIAL STYLING ###################################### */
+#testimonials{
+    padding: 5rem 0rem;
+    background: rgb(243, 243, 243);
+}
+h2.testimonial-title{
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 400;
+    color: #555;
+}
+.testimonial-container{
+    display: flex;
+    /* border: 2px solid red; */
+    justify-content: space-between;
+    font-size: 1.6rem;
+    padding: 1rem;
+}
+
+#testimonials .checked{
+    color: #FF9529;
+}
+
+.testimonial-box .testimonial-text{
+    margin: 1rem 0;
+    color: #444;
+}
+
+.testimonial-box{
+    text-align: center;
+    padding: 1rem;
+}
+
+.customer-photo img{
+    display: block;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
+    margin: auto;
+}
+
+/* ######################### contact us ###############################  */
+#contact{
+    padding: 5rem 0;
+    /* border: 2px solid green; */
+    background: rgb(226, 226, 226);
+}
+
+.contact-container{
+    display: flex;
+    /* border: 4px solid purple; */
+    background: #fff;
+
+}
+
+.contact-image{
+    /* border: 2px solid red; */
+    width: 50%;
+    /* overflow: hidden; */
+    
+}
+
+.contact-image img{
+    display: block;
+    height: 400px;
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+}
+
+.form-container{
+    padding: 1rem;
+    width: 50%;
+    /* border: 2px solid red; */
+    margin: auto;
+    /* background: rgb(243, 243, 243); */
+}
+
+.form-container input{
+    display: block;
+    width: 100%;
+    /* margin-bottom: 2rem;
+    outline: 2px solid red; */
+    border: none;
+    border-bottom: 2px solid #ddd;
+    padding: 1rem 0;
+    box-shadow: none;
+    outline: none;
+   margin-bottom: 1rem;
+   color: #444;
+   font-weight: 500;
+}
+
+.form-container textarea{
+    display: block;
+    width: 100%;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid #ddd;
+    padding: 1rem 0;
+}
+
+
+.form-container h2{
+    font-size: 3rem;
+    font-weight: 400;
+    color: #444;
+    /* text-align: center; */
+    margin-bottom: 1rem;
+}
+
+.form-container a{
+    font-size: 1.2rem;
+}
+
+#footer h2{
+    text-align: center;
+    font-size: 2rem;
+    padding: 3rem;
+    font-weight: 500;
+    color: #fff;
+    background: rgb(65, 65, 65);
+}
+/* ############################################################################ */
+@media(max-width: 500px){
+    .food-container{
+        flex-direction: column;
+        align-items: stretch;
+        
+    }
+    .food-type:not(:last-child){
+        margin-bottom: 3rem;
+    }
+    .food-type{
+        box-shadow: 5px 5px 10px 0px #aaa;
+        padding: 0;
+        width: 90%;
+        margin: auto; 
+    }
+    .img-container{
+        margin: 0;
+    }
 }
